@@ -1,0 +1,413 @@
+  <html>
+  <head>  
+  <script></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="function.js"></script>
+  </head>
+
+  <body class="body">
+    <div class="titel">Work In Progress</div>
+
+
+    <!--Titel-->
+  <div class="titel">Earos</div>
+
+  <!--Introduction-->
+  <div class="t_0021">Welcome to Earos, have some lootboxes... <br>You may open them all but only keep one.<br> Decisions, decisions...</div>
+
+  <!--Lootbox-->
+  <div class="intro">  
+    <div> <input type="radio" name="intro" class="hidden" onchange="lootbox(1)" id="intro_04" /> <label for="intro_04" ><img src="/pica/chest_04.png" id="intro_01" class="pic_0012" ><div class="t_0003" id="lootbox1"></div></div>
+    <div> <input type="radio" name="intro" class="hidden" onchange="lootbox(2)" id="intro_05" /> <label for="intro_05" ><img src="/pica/chest_04.png" id="intro_02" class="pic_0012" ><div class="t_0003" id="lootbox2"></div></div>
+    <div> <input type="radio" name="intro" class="hidden" onchange="lootbox(3)" id="intro_06" /> <label for="intro_06" ><img src="/pica/chest_04.png" id="intro_03" class="pic_0012" ><div class="t_0003" id="lootbox3"></div></div>
+  </div> 
+
+  <!--Choose Stat-->
+
+  <div class="t_0021">Well, well not so greedy mortal.<br> It's either Luck or Planning.</div>
+  <div class="choose_roll_pb_gridd">
+
+    <div> <label for="roll_0001"> <div class="t_0021">Roll</div> <img src="/pica/luck_02.jpg"   id="choose_0001" class="pic_0005">  </label>  <input id="roll_0001" type="radio" name="roll_buy" class="hidden" onclick="choose_pb_roll(1)"/> </label></div>
+    <div> <label for="buy_0001"> <div class="t_0021">Buy Stat</div> <img src="/pica/planning_01.jpg"   id="choose_0002" class="pic_0005">  </label>  <input id="buy_0001"  type="radio" name="roll_buy" class="hidden" onclick="choose_pb_roll(2)"/> </label></div>
+
+  </div>
+    
+  <!--Pointbuy-->
+  <div id="point_buy">
+
+    <div><div class="t_0021" id="pb_stat">Starting with 27 Points</div></div> 
+
+      <div class="buy_stat_gridd">
+
+      <div class="t_0022"> 
+            <div class="hex_01" onclick="point_buy(0, true)"></div>
+            <div class="hex_02"><div id="stat_pt_buy_0">8</div></div>
+            <div class="hex_03" onclick="point_buy(0, false)"></div>
+            <div class="">STR</div>
+            <div class="" id="pb_cost_0">Cost: 1</div>
+      </div>
+
+      <div class="t_0022">
+            <div class="hex_01" onclick="point_buy(1, true)"></div>
+            <div class="hex_02"><div id="stat_pt_buy_1">8</div></div>
+            <div class="hex_03" onclick="point_buy(1, false)"></div>
+            <div>DEX</div>
+            <div id="pb_cost_1">Cost: 1</div>
+      </div>
+
+      <div class="t_0022">
+            <div class="hex_01" onclick="point_buy(2, true)"></div>
+            <div class="hex_02"><div id="stat_pt_buy_2">8</div></div>
+            <div class="hex_03" onclick="point_buy(2, false)"></div>
+            <div >CON</div>
+            <div id="pb_cost_2">Cost: 1</div>
+      </div>
+            
+      <div class="t_0022">
+            <div class="hex_01" onclick="point_buy(3, true)"></div>
+            <div class="hex_02"><div id="stat_pt_buy_3">8</div></div>
+            <div class="hex_03" onclick="point_buy(3, false)"></div>
+            <div>INT</div>
+            <div  id="pb_cost_3">Cost: 1</div>
+      </div>
+
+      <div class="t_0022">
+            <div class="hex_01" onclick="point_buy(4, true)"></div>
+            <div class="hex_02"><div id="stat_pt_buy_4">8</div></div>
+            <div class="hex_03" onclick="point_buy(4, false)"></div>
+            <div>PSY</div>
+            <div id="pb_cost_4">Cost: 1</div>
+      </div>
+
+      <div class="t_0022">
+            <div class="hex_01" onclick="point_buy(5, true)"></div>
+            <div class="hex_02"><div id="stat_pt_buy_5">8</div></div>
+            <div class="hex_03" onclick="point_buy(5, false)"></div>
+            <div>CHA</div>
+            <div id="pb_cost_5">Cost: 1</div>
+      </div>
+    </div>        
+    <div>
+    </div>
+  </div>
+
+
+  <!--Button um stats zu rollen-->
+  <div id="stat_roll"> 
+
+    <div id="button_1001" class="button_0001" type = "button" onclick = "rollstat()">Roll Stat</div>  
+
+    <div class="statpresentation">
+
+      <div class="t_0011">Strength <br>     <div id="stat_00" class="t_0010"> </div> </div>
+      <div class="t_0011">Dexterity <br>    <div id="stat_01" class="t_0010"> </div> </div>
+      <div class="t_0011">Constitution <br> <div id="stat_02" class="t_0010"> </div> </div>
+      <div class="t_0011">Intelligence <br> <div id="stat_03" class="t_0010"> </div> </div>
+      <div class="t_0011">Psych <br>        <div id="stat_04" class="t_0010"> </div> </div>
+      <div class="t_0011">Charm <br>        <div id="stat_05" class="t_0010"> </div> </div>
+    </div>
+    
+  </div> 
+
+  <!--Races-->
+
+
+  <!--Titel-->
+  <div class="titel">Races</div>
+
+  <div  class="t_0021">These Races, we created them for pure entertainment. The further down, the older their existence. We don't really like the...     more primitive Races anymore, so I have to ask you to stay within Humanoids.</div>
+
+  <!--Races--><div class="races">
+
+    <div class="bck_1"> <label for="ra_0">  <img src="/pica/human_220.jpg"          class="pic_1" id="rac_0">  <input type="radio" name="race" class ="hidden" onclick="setrace(0)" id="ra_0" /> <div class="t_0001">Human</div><div id="benefit_00"><br> Cooperation or conquest defines a human. Do you fight for freedom or domination?</div><div></div></div>
+    <div class="bck_1"> <label for="ra_1">  <img src="/pica/Elve_17.jpg"            class="pic_1" id="rac_1">  <input type="radio" name="race" class ="hidden" onchange="setrace(1)" id="ra_1" /> <div class="t_0001">High Elve</div><div id="benefit_01"><br>Graceful and charismatic, high elves are proud of their noble heritage, and have a tendency to look down upon other races.</div></div>
+    <div class="bck_1"> <label for="ra_2">  <img src="/pica/dark_elve_16.jpg"       class="pic_1" id="rac_2">  <input type="radio" name="race" class ="hidden" onchange="setrace(2)" id="ra_2" /> <div class="t_0001">Dark Elve</div><div id="benefit_02"><br>Distrustful towards outsiders, they can often appear mysterious and evendangerous at first, but once their trust is earned, there’s no fiercer friend than a dark elf.</div></div>
+    <div class="bck_1"> <label for="ra_3">  <img src="/pica/dark_elve_66.jpg"       class="pic_1" id="rac_3">  <input type="radio" name="race" class ="hidden" onchange="setrace(3)" id="ra_3" /> <div class="t_0001">Moon Elve</div><div id="benefit_03"><br>Moon elves align their lifestyle with the lunar cycle, granting them the strongest innate affinity formagic.</div></div>
+    <div class="bck_1"> <label for="ra_4">  <img src="/pica/fox_kin_25.jpg"         class="pic_1" id="rac_4">  <input type="radio" name="race" class ="hidden" onchange="setrace(4)" id="ra_4" /> <div class="t_0001">Fox Kin</div><div id="benefit_04"><br>A wandering folk of performers, musicians, and sleight of hand tricksters. Wherever they go, foxkin caravans always leave spirits high – and coin purses light.</div></div>
+    <div class="bck_1"> <label for="ra_5">  <img src="/pica/orc_04.jpg"             class="pic_1" id="rac_5">  <input type="radio" name="race" class ="hidden" onchange="setrace(5)" id="ra_5" /> <div class="t_0001">Half Orc</div><div id="benefit_05"><br>Human mothers rarely survive giving birth to a half-orc baby, and their orcish fathers reject them asweaklings. The humans banish them as monsters.</div></div>
+    <div class="bck_1"> <label for="ra_6">  <img src="/pica//Driade_06.jpg"         class="pic_1" id="rac_6">  <input type="radio" name="race" class ="hidden" onchange="setrace(6)" id="ra_6" /> <div class="t_0001">Deandra</div><div id="benefit_06"><br>These esoteric forest-dwellers have a symbiotic relationship with nature. Known to be peaceful and even-tempered, unless their verdant sanctum is disturbed.</div></div>
+    <div class="bck_1"> <label for="ra_7">  <img src="/pica/goliath_03.jpg"         class="pic_1" id="rac_7">  <input type="radio" name="race" class ="hidden" onchange="setrace(7)" id="ra_7" /> <div class="t_0001">Goliath</div><div id="benefit_07"><br>A strong and sturdy mountain folk, Goliaths are welcoming towards the few willingto brave the treacherous roads leading to their rocky home.</div></div>
+    <div class="bck_1"> <label for="ra_8">  <img src="/pica/demon_56.jpg"           class="pic_1" id="rac_8">  <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_8" /> <div class="t_0001">Demon</div><div id="benefit_08"><br>Greater celestials of the Infernal Circle. Rarely seen in their true form, but their influence is feltwherever there’s pain, loss, or suffering.</div></div>
+    <div class="bck_1"> <label for="ra_9">  <img src="/pica/demon_09.jpg"           class="pic_1" id="rac_9">  <input type="radio" name="race" class ="hidden" onchange="setrace(9)" id="ra_9" /> <div class="t_0001">Succub</div><div id="benefit_09"><br>Demonic and Human offspring, Human-like in appearance, they can easily mingle with mortal races, spreading corruption.</div></div>
+    <div class="bck_1"> <label for="ra_10"> <img src="/pica/Celestial_04.jpg"       class="pic_1" id="rac_10"> <input type="radio" name="race" class ="hidden" onchange="setrace(10)" id="ra_10" /> <div class="t_0001">Asamir</div><div id="benefit_10"><br>As lesser heavenly celestials, they can walk among people. Most of them are manifestations of a singular quality or emotion, such as mercy, trust, or hope.</div></div>
+    <div class="bck_1"> <label for="ra_11"> <img src="/pica/Arch_Angel.jpg"         class="pic_1" id="rac_11"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_11" /> <div class="t_0001">Angel</div><div id="benefit_11"><br>Greater celestials of the Heavenly Circle. Angels are the purest manifestations of good in the world, incomprehensible to most.</div></div>
+    <div class="bck_1"> <label for="ra_12"> <img src="/pica/goblin_05.jpg"          class="pic_1" id="rac_12"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_12" /> <div class="t_0001">Goblin</div><div id="benefit_12"><br>Territorial feuds are common among the primitive tribes of goblin society. Theywill ambush and rip apart any lonely traveller trespassing in their domain.</div></div>
+    <div class="bck_1"> <label for="ra_13"> <img src="/pica/orc_05.jpg"             class="pic_1" id="rac_13"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_13" /> <div class="t_0001">Orc</div><div id="benefit_13"><br>Orcs are slightly larger and their skin has a greyish green tone. Most ofthem wield heavy, two-handed weapons of their own making. Deadly foes one can encounter.</div></div>
+    <div class="bck_1"> <label for="ra_14"> <img src="/pica/ogre_01.jpg"            class="pic_1" id="rac_14"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_14" /> <div class="t_0001">Ogre</div><div id="benefit_14"><br>Often referred to as the big brothers of orcs, they are not in fact related. Ogres are twice as large, twiceas strong, and twice as stupid.</div></div>
+    <div class="bck_1"> <label for="ra_15"> <img src="/pica/beast_01.jpg"           class="pic_1" id="rac_15"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_15" /> <div class="t_0001">Beast</div><div id="benefit_15"><br>Animals of the forests and plains, birds of the sky, fish and crustaceans of the seas and rivers. They forgeno alliances, and owe fealty to no one.</div></div>
+    <div class="bck_1"> <label for="ra_16"> <img src="/pica/undead_01.jpg"          class="pic_1" id="rac_16"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_16" /> <div class="t_0001">Undead</div><div id="benefit_16"><br>Reanimated and puppeteered by unnatural forces, the existence of the undead is the most immediatelyearthbound out of all the creatures.</div></div>
+    <div class="bck_1"> <label for="ra_17"> <img src="/pica/dragon_01.jpg"          class="pic_1" id="rac_17"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_17" /> <div class="t_0001">Dragon</div><div id="benefit_17"><br>A majestic race of intelligent winged creatures. Dethroned by humans and elves as the crown ofcreation, they harbour a deep-seated scorn for all mortals.</div></div>
+    <div class="bck_1"> <label for="ra_18"> <img src="/pica/Elemental_01.jpg"       class="pic_1" id="rac_18"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_18" /> <div class="t_0001">Elementals</div><div id="benefit_18"><br>Elementals are the coagulations of forces of nature into somewhat human-like shapes. Fully defined by their element, they are powerful but predictable foes.</div></div>
+    <div class="bck_1"> <label for="ra_19"> <img src="/pica/elemental_titan_01.jpg" class="pic_1" id="rac_19"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_19" /> <div class="t_0001">Titan</div><div id="benefit_19"><br>Mythical and ancient guardians of the land. Slumbering titans are often mistaken for small, rocky hills dotting the countryside.</div></div>
+    <div class="HIDDEN"> <label for="ra_22"> <img src="ARt_01.jpg"                  class="pic_1" id="rac_20"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_20" /> <div class="t_0001">Header</div><div></div></div>
+    <div class="bck_1"> <label for="ra_21"> <img src="/pica/unknown_01.jpg"         class="pic_1" id="rac_21"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_21" /> <div class="t_0001">Unknown</div><div id="benefit_20"><br>Whispers from the subterranean abyss insinuate the awakening of a primeval force. Beware of the depths!</div></div>
+    <div class="bck_1"> <label for="ra_20"> <img src="/pica/shadows_01.jpg"         class="pic_1" id="rac_22"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_22" /> <div class="t_0001">Shadows</div><div id="benefit_21"><br>Creatures of pure darkness, dwelling in the cracks and crevices of the mortal realm. They are beyond good and evil, defined solely by an insatiable hunger for life.</div></div>
+    <div class="HIDDEN"> <label for="ra_23"> <img src="ARt_01.jpg"                  class="pic_1" id="rac_23"> <input type="radio" name="race" class ="hidden" onchange="setrace(23)" id="ra_23" /> <div class="t_0001">HEADER</div><div></div></div>
+
+  </div>
+
+
+
+
+  <!--Body Radios-->
+  <div class="titel">Body</div>
+
+  <div  class="t_0021">I think you are attuned to the concept of hosts... Ah, you humans call them "Body". We will let you choose some specifications.</div>
+  <div></div>
+  <div  class="t_0021">Upcoming:<br> You have a chance to get traits depending on what you pick.</div>
+
+
+  <div class="body_grid">
+    <div class="gender_grid">Gender</div>
+      <div class="backgrnd_01"> <label for="gender_01"><img src="/pica/female_01.jpg"    class="pic_16" id="gen_0"> <input type="radio" name="genderradio" class ="hidden" onchange="setbody(0)" id="gender_01" /> <div class="t_01">Female</div></div>
+      <div class="backgrnd_01"> <label for="gender_02"><img src="/pica/male_01.jpg"      class="pic_16" id="gen_1"> <input type="radio" name="genderradio" class ="hidden" onchange="setbody(1)" id="gender_02" /> <div class="t_01">Male</div></div>
+      <div class="backgrnd_01"> <label for="gender_03"><img src="/pica/elemental_02.jpg" class="pic_16" id="gen_2"> <input type="radio" name="genderradio" class ="hidden" onchange="setbody(2)" id="gender_03" /> <div class="t_01">Genderless</div></div>
+  </div>
+
+  <div class="bodysize_grid">
+    <div class="b_01">Body Size</div>
+      <div class="backgrnd_01"> <label for="size_01"><img src="/pica/small_02.jpg"    class="pic_16" id="siz_3"> <input type="radio" name="heightradio" class ="hidden" onchange="setbody(3)" id="size_01" /> <div class="t_01">Small</div></div>
+      <div class="backgrnd_01"> <label for="size_02"><img src="/pica/human_56.jpg"   class="pic_16" id="siz_4"> <input type="radio" name="heightradio" class ="hidden" onchange="setbody(4)" id="size_02" /> <div class="t_01">Avarage</div></div>
+      <div class="backgrnd_01"> <label for="size_03"><img src="/pica/human_40.jpg"   class="pic_16" id="siz_5"> <input type="radio" name="heightradio" class ="hidden" onchange="setbody(5)" id="size_03" /> <div class="t_01">Tall</div></div>
+      <div class="backgrnd_01"> <label for="size_04"><img src="/pica/human_66.jpg"   class="pic_16" id="siz_6"> <input type="radio" name="heightradio" class ="hidden" onchange="setbody(6)" id="size_04" /> <div class="t_01">Towering</div></div>
+
+  </div>
+
+  <div class="bodyweight_grid">
+    <div class="b_02">Body Weight</div>
+      <div class="backgrnd_01"> <label for="weight_01"><img src="/pica/body_skinny_01.jpg"  class="pic_16" id="wei_7"> <input type="radio" name="weightradio" class ="hidden" onchange="setbody(7)" id="weight_01" /> <div class="t_01">Skinny</div></div>
+      <div class="backgrnd_01"> <label for="weight_02"><img src="/pica/human_75.jpg"       class="pic_16" id="wei_8"> <input type="radio" name="weightradio" class ="hidden" onchange="setbody(8)" id="weight_02" /> <div class="t_01">Avarage</div></div>
+      <div class="backgrnd_01"> <label for="weight_03"><img src="/pica/body_chuby_01.jpg"   class="pic_16" id="wei_9"> <input type="radio" name="weightradio" class ="hidden" onchange="setbody(9)" id="weight_03" /> <div class="t_01">Chubby</div></div>
+      <div class="backgrnd_01"> <label for="weight_04"><img src="/pica/body_fat_01.jpg"     class="pic_16" id="wei_10"> <input type="radio" name="weightradio" class ="hidden" onchange="setbody(10)" id="weight_04" /> <div class="t_01">Fleshy</div></div>
+  </div>
+
+  <div class="bodyfit_grid">
+    <div class="b_03">Fitness</div>
+      <div class="backgrnd_01"> <label for="fit_01"><img src="/pica/human_192.jpg"       class="pic_16" id="fit_11"> <input type="radio" name="fitradio" class ="hidden" onchange="setbody(11)" id="fit_01" /> <div class="t_01">Untrained</div></div>
+      <div class="backgrnd_01"> <label for="fit_02"><img src="/pica/body_avarage_01.jpg"  class="pic_16" id="fit_12"> <input type="radio" name="fitradio" class ="hidden" onchange="setbody(12)" id="fit_02" /> <div class="t_01">Avarage</div></div>
+      <div class="backgrnd_01"> <label for="fit_03"><img src="/pica/fit_01.jpg"  class="pic_16" id="fit_13"> <input type="radio" name="fitradio" class ="hidden" onchange="setbody(13)" id="fit_03" /> <div class="t_01">Fit</div></div>
+      <div class="backgrnd_01"> <label for="fit_04"><img src="/pica/body_trained_01.jpg"  class="pic_16" id="fit_14"> <input type="radio" name="fitradio" class ="hidden" onchange="setbody(14)" id="fit_04" /> <div class="t_01">Trained</div></div>
+  </div>
+
+  <div class="bodyface_grid">
+    <div class="b_04">Face</div>
+      <div class="backgrnd_01"> <label for="face_01"><img src="/pica/body_face_masculin_02.jpg"     class="pic_06" id="fac_15"> <input type="radio" name="faceradio" class ="hidden" onchange="setbody(15)" id="face_01" /> <div class="t_01">Masculin</div></div>
+      <div class="backgrnd_01"> <label for="face_02"><img src="/pica/body_face_andromorphus_02.jpg" class="pic_06" id="fac_16"> <input type="radio" name="faceradio" class ="hidden" onchange="setbody(16)" id="face_02" /> <div class="t_01">Neutral</div></div>
+      <div class="backgrnd_01"> <label for="face_03"><img src="/pica/body_face_female_02.jpg"       class="pic_06" id="fac_17"> <input type="radio" name="faceradio" class ="hidden" onchange="setbody(17)" id="face_03" /> <div class="t_01">Feminine</div></div>
+      <div class="backgrnd_01"> <label for="face_04"><img src="/pica/body_face_girly_01.jpg"        class="pic_06" id="fac_18"> <input type="radio" name="faceradio" class ="hidden" onchange="setbody(18)" id="face_04" /> <div class="t_01">Girly</div></div>
+  </div>
+
+  <div class="bodybread_grid">
+    <div class="b_05">Hair Color</div>
+      <div class="backgrnd_01"> <label for="bread_01"><img src="/pica/hair_blond_05.jpg"    class="pic_06" id="hai_19"> <input type="radio" name="breadradio" class ="hidden" onchange="setbody(19)" id="bread_01" /> <div class="t_01">Blond</div></div>
+      <div class="backgrnd_01"> <label for="bread_02"><img src="/pica/hair_brown_03.jpg"    class="pic_06" id="hai_20"> <input type="radio" name="breadradio" class ="hidden" onchange="setbody(20)" id="bread_02" /> <div class="t_01">Brown</div></div>
+      <div class="backgrnd_01"> <label for="bread_03"><img src="/pica/hair_black_01.jpg"    class="pic_06" id="hai_21"> <input type="radio" name="breadradio" class ="hidden" onchange="setbody(21)" id="bread_03" /> <div class="t_01">Black</div></div>
+      <div class="backgrnd_01"> <label for="bread_04"><img src="/pica/hair_red_01.jpg"      class="pic_06" id="hai_22"> <input type="radio" name="breadradio" class ="hidden" onchange="setbody(22)" id="bread_04" /> <div class="t_01">Red</div></div> 
+  </div>
+
+  <div class="bodybutter_grid">
+    <div class="b_06">Eye Color</div>
+    <div class="backgrnd_01"> <label for="butter_01"><img src="/pica/eye_blue_04.jpg"     class="pic_06" id="eye_27"> <input type="radio" name="buttterradio" class ="hidden" onchange="setbody(27)" id="butter_01" /> <div class="t_01">Blue</div></div>
+    <div class="backgrnd_01"> <label for="butter_02"><img src="/pica/eye_brown_01.jpg"    class="pic_06" id="eye_28"> <input type="radio" name="buttterradio" class ="hidden" onchange="setbody(28)" id="butter_02" /> <div class="t_01">Brown</div></div>
+    <div class="backgrnd_01"> <label for="butter_03"><img src="/pica/hair_green_02.jpg"   class="pic_06" id="eye_29"> <input type="radio" name="buttterradio" class ="hidden" onchange="setbody(29)" id="butter_03" /> <div class="t_01">Green</div></div>
+    <div class="backgrnd_01"> <label for="butter_04"><img src="/pica/eye_grey_01.jpg"     class="pic_06" id="eye_30"> <input type="radio" name="buttterradio" class ="hidden" onchange="setbody(30)" id="butter_04" /> <div class="t_01">Grey</div></div>
+  </div>
+
+  
+  <!--Mind-->
+  <div class="titel">Mind</div>
+
+    <div  class="t_0021">Ah finally mortal.. I thought you got lost in the ether of ethernity, never to be found again...<br> Well next we take a look into that pretty little skull of yours shall we...</div>
+    <div></div>
+    <div  class="t_0021">You can choose out of a number of Sins and Virtues.<br>We don't judge, grabb them by your hearts desire.</div>
+    <div></div>
+    <div  class="t_0021">Upcoming: <br>Once you have a number of traits related to eachother, there is a chance to get a new feature or other benefit.</div>
+
+    
+  <div class="mind_grid">
+    <div class="m_1011">Virtue</div>
+
+    <div class="backgrnd_01"><img onclick="setmind(0)"  class="pic_07" id="m_0" src="/pica/adaptable_02.jpg" alt=""><div class="t_01">Adaptable</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(1)"  class="pic_07" id="m_1" src="/pica/adventures_01.jpg" alt=""><div class="t_01">Adventerous</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(2)"  class="pic_07" id="m_2" src="/pica/meditating_01.jpg" alt=""><div class="t_01">Balanced</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(3)"  class="pic_07" id="m_3" src="/pica/brave_01.jpg" alt=""><div class="t_01">Brave</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(4)"  class="pic_07" id="m_4" src="/pica/brilliant_01.jpg" alt=""><div class="t_01">Brilliant</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(5)"  class="pic_07" id="m_5" src="/pica/open_minded_01.jpg" alt=""><div class="t_01">Open Mind</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(6)"  class="pic_07" id="m_6" src="/pica/charming_01.jpg" alt=""><div class="t_01">Charming</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(7)"  class="pic_07" id="m_7" src="/pica/beauty_01.jpg" alt=""><div class="t_01">Pretty</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(8)"  class="pic_07" id="m_8" src="/pica/caring_01.jpg" alt=""><div class="t_01">Caring</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(9)"  class="pic_07" id="m_9" src="/pica/convidence_01.jpg" alt=""><div class="t_01">Confident</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(10)" class="pic_07" id="m_10" src="/pica/creative_01.jpg" alt=""><div class="t_01">Creative</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(11)" class="pic_07" id="m_11" src="/pica/diplomat_01.jpg" alt=""><div class="t_01">Dipomatic</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(12)" class="pic_07" id="m_12" src="/pica/empathic_01.jpg" alt=""><div class="t_01">Empathic</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(13)" class="pic_07" id="m_13" src="/pica/energetic_01.jpg" alt=""><div class="t_01">Energetic</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(14)" class="pic_07" id="m_14" src="/pica/friendly_01.jpg" alt=""><div class="t_01">Friendly</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(15)" class="pic_07" id="m_15" src="/pica/forgivness_01.jpg" alt=""><div class="t_01">Forgiving</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(16)" class="pic_07" id="m_16" src="/pica/slave_04.jpg" alt=""><div class="t_01">Hopefull</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(17)" class="pic_07" id="m_17" src="/pica/heroic_01.jpg" alt=""><div class="t_01">Heroic</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(18)" class="pic_07" id="m_18" src="/pica/human_97.jpg" alt=""><div class="t_01">Modest</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(19)" class="pic_07" id="m_19" src="/pica/gentle_01.jpg" alt=""><div class="t_01">Gentle</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(20)" class="pic_07" id="m_20" src="/pica/honest_01.jpg" alt=""><div class="t_01">Honest</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(21)" class="pic_07" id="m_21" src="/pica/humble_01.jpg" alt=""><div class="t_01">Humble</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(22)" class="pic_07" id="m_22" src="/pica/reliable_01.jpg" alt=""><div class="t_01">Reliable</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(23)" class="pic_07" id="m_23" src="/pica/humorus_01.jpg" alt=""><div class="t_01">Humorus</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(24)" class="pic_07" id="m_24" src="/pica/human_223.jpg" alt=""><div class="t_01">Obediant</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(25)" class="pic_07" id="m_25" src="/pica/passionate_01.jpg" alt=""><div class="t_01">Passionate</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(26)" class="pic_07" id="m_26" src="/pica/pationated_01.jpg" alt=""><div class="t_01">Patient</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(27)" class="pic_07" id="m_27" src="/pica/gentle_02.jpg" alt=""><div class="t_01">Sefless</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(28)" class="pic_07" id="m_28" src="/pica/peude_01.jpg" alt=""><div class="t_01">Prude</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(29)" class="pic_07" id="m_29" src="/pica/wise_01.jpg" alt=""><div class="t_01">Wise</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(30)" class="pic_07" id="m_30" src="/pica/pure_01.jpg" alt=""><div class="t_01">Pure</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(31)" class="pic_07" id="m_31" src="/pica/pray_03.jpg" alt=""><div class="t_01">Faithfull</div><div class="t_0039">20 Points</div></div>
+
+  </div>
+
+  <div class="mind_grid">
+    <div class="m_1011">Sin</div>
+    <div class="backgrnd_01"><img onclick="setmind(32)" class="pic_07" id="m_32" src="/pica/agressive_01.jpg" alt=""><div class="t_01">Agressive</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(33)" class="pic_07" id="m_33" src="/pica/anxious.jpg" alt=""><div class="t_01">Anxious</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(34)" class="pic_07" id="m_34" src="/pica/arrogant_01.jpg" alt=""><div class="t_01">Arrogant</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(35)" class="pic_07" id="m_35" src="/pica/bitchy_01.jpg" alt=""><div class="t_01">Bitchy</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(36)" class="pic_07" id="m_36" src="/pica/blunt_01.jpg" alt=""><div class="t_01">Blunt</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(37)" class="pic_07" id="m_37" src="/pica/cold_01.jpg" alt=""><div class="t_01">Cold</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(38)" class="pic_07" id="m_38" src="/pica/cold_02.jpg" alt=""><div class="t_01">Careless</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(39)" class="pic_07" id="m_39" src="/pica/cruel_02.jpg" alt=""><div class="t_01">Cruel</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(40)" class="pic_07" id="m_40" src="/pica/destructive_01.jpg" alt=""><div class="t_01">Destructive</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(41)" class="pic_07" id="m_41" src="/pica/dishonest_01.jpg" alt=""><div class="t_01">Dishonest</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(42)" class="pic_07" id="m_42" src="/pica/disloyal_01.jpg" alt=""><div class="t_01">Disloyal</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(43)" class="pic_07" id="m_43" src="/pica/radicalist_01.jpg" alt=""><div class="t_01">Radical</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(44)" class="pic_07" id="m_44" src="/pica/racism_01.jpg" alt=""><div class="t_01">Racist</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(45)" class="pic_07" id="m_45" src="/pica/militaristic_01.jpg" alt=""><div class="t_01">Militaristic</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(46)" class="pic_07" id="m_46" src="/pica/impatient_01.jpg" alt=""><div class="t_01">Impatient</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(47)" class="pic_07" id="m_47" src="/pica/Insulting_01.jpg" alt=""><div class="t_01">Insulting</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(48)" class="pic_07" id="m_48" src="/pica/irrational_01.jpg" alt=""><div class="t_01">Irrational</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(49)" class="pic_07" id="m_49" src="/pica/bullying_01.jpg" alt=""><div class="t_01">Mean</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(50)" class="pic_07" id="m_50" src="/pica/judgmental_01.jpg" alt=""><div class="t_01">Judgmental</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(51)" class="pic_07" id="m_51" src="/pica/stealthy_01.jpg" alt=""><div class="t_01">Stealthy</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(52)" class="pic_07" id="m_52" src="/pica/nosy_01.jpg" alt=""><div class="t_01">Nosy</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(53)" class="pic_07" id="m_53" src="/pica/shamless_01.jpg" alt=""><div class="t_01">Shamless</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(54)" class="pic_07" id="m_54" src="/pica/pathetic_01.jpg" alt=""><div class="t_01">Pathetic</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(55)" class="pic_07" id="m_55" src="/pica/pervert_01.jpg" alt=""><div class="t_01">Perverse</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(56)" class="pic_07" id="m_56" src="/pica/greedy_01.jpg" alt=""><div class="t_01">Greedy</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(57)" class="pic_07" id="m_57" src="/pica/secretive_01.jpg" alt=""><div class="t_01">Secretive</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(58)" class="pic_07" id="m_58" src="/pica/uncaring_01.jpg" alt=""><div class="t_01">Uncaring</div><div class="t_0039">20 Points</div></div>
+    <div class="backgrnd_01"><img onclick="setmind(59)" class="pic_07" id="m_59" src="/pica/vengful_01.jpg" alt=""><div class="t_01">Vengful</div><div class="t_0039">20 Points</div></div>
+  
+  </div>
+
+  <div class="titel" style="cursor: pointer;" onclick="patreon()">patreon</div>
+  <div id="1089" class="hidden" >
+  <div class="mind_grid_pat">
+    <div class="m_1011">Sneak Peak<br><br>Sins of Lust</div>
+    
+    <div class="backgrnd_01"><img class="pic_0033" src="/pica/nsfw/kissing_05.jpg" alt=""><div class="t_01">Sensual</div></div>
+    <div class="backgrnd_01"><img class="pic_0033" src="/pica/nsfw/erotic_11.jpeg" alt=""><div class="t_01">Vanila</div></div>
+    <div class="backgrnd_01" id="patreon_01"><img class="pic_0034" src="/pica/nsfw/lesbian_4some_01.png" alt=""><div class="t_01">Group Sex</div></div>
+    <div class="backgrnd_01"><img class="pic_0033" src="/pica/nsfw/nudist_01.jpeg" alt=""><div class="t_01">Nudist</div></div>
+    <div class="backgrnd_01" id="patreon_02"><img class="pic_0034" src="/pica/nsfw/blowjob_01.jpg" alt=""><div class="t_01">Blowjobs</div></div>
+    <div class="backgrnd_01" id="patreon_03"><img class="pic_0034" src="/pica/nsfw/drunk_01.jpeg" alt=""><div class="t_01">Drunk</div></div>
+    <div class="backgrnd_01" id="patreon_04"><img class="pic_0034" src="/pica/nsfw/tentacles_03.jpeg" alt=""><div class="t_01">Tentacles</div></div>
+    <div class="backgrnd_01" id="patreon_07"><img class="pic_0034" src="/pica/nsfw/submissive.jpg" alt=""><div class="t_01">Submissive</div></div>
+    <div class="backgrnd_01" id="patreon_05"><img class="pic_0034" src="/pica/nsfw/spanking_01.jpeg" alt=""><div class="t_01">Spanking</div></div>
+    <div class="backgrnd_01" id="patreon_06"><img class="pic_0034" src="/pica/nsfw/forced_blowjob.jpg" alt=""><div class="t_01">Forced Blowjobs</div></div>
+    <div class="backgrnd_01"><img class="pic_0033" src="/pica/nsfw/cum_addict_01.jpg" alt=""><div class="t_01">Cum Addict</div></div>
+    <div class="backgrnd_01"><img class="pic_0033" src="/pica/nsfw/slave_01.jpeg" alt=""><div class="t_01">Mind Magic</div></div>
+    <div class="backgrnd_01" id="patreon_08"> <img class="pic_0034" src="/pica/nsfw/dominate_01.jpg" alt=""><div class="t_01">Dominant</div></div>
+    <div class="backgrnd_01"><img class="pic_0033" src="/pica/nsfw/whipping.png" alt=""><div class="t_01">Whipping</div></div>
+    <div class="backgrnd_01"><img class="pic_0033" src="/pica/nsfw/slave_01.jpg" alt=""><div class="t_01">Enslavment</div></div>
+    <div class="backgrnd_01" id="patreon_09"><img class="pic_0034" src="/pica/nsfw/interracial_01.jpg" alt=""><div class="t_01">Interracial Sex</div></div>
+    <div class="backgrnd_01"><img class="pic_0033" src="/pica/nsfw/rough_01.jpg" alt=""><div class="t_01">Group Rape  </div></div>
+    <div class="backgrnd_01" id="patreon_10"><img class="pic_0034" src="/pica/nsfw/church_01.jpeg" alt=""><div class="t_01">Attonment</div></div>
+  
+
+
+  </div>
+  </div>
+
+
+
+  <!--Classes-->
+  <div class="titel">Classes</div>
+
+  <div class="classes_grid"> 
+
+    <div class="backgrnd_01"> <label for="class_01"><img src="/pica/assasin_01.jpg" class="pic_06" id="cl_01"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_01" /> <div class="t_01">Assasin</div><div>First strike is critical.</div></div>
+    <div class="backgrnd_01"> <label for="class_02"><img src="/pica/rogue_01.jpg" class="pic_06" id="cl_02"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_02" /> <div class="t_01">Rogue</div><div>Chance to deal 1d6 extra sneak gamage.</div></div>
+    <div class="backgrnd_01"> <label for="class_03"><img src="/pica/monk_01.jpg" class="pic_06" id="cl_03"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_03" /> <div class="t_01">Monk</div><div>Chance to dodge meele Attacks. You unarmed attacks deal 1d4+dex damage.</div></div>
+    <div class="backgrnd_01"> <label for="class_04"><img src="/pica/archer_02.jpg" class="pic_06" id="cl_04"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_04" /> <div class="t_01">War Archer</div><div>Get profiency in heavy armor and longbows. You get a +2 to hit with bows.</div></div>
+    <div class="backgrnd_01"> <label for="class_05"><img src="/pica/pikemen_03.jpg" class="pic_06" id="cl_05"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_05" /> <div class="t_01">Pikemen</div><div>Proficency in heavy armor and pikes. Chance to counterattack on enemy turn.</div></div>
+    <div class="backgrnd_01"> <label for="class_06"><img src="/pica/cavalerie_02.jpg" class="pic_06" id="cl_06"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_06" /> <div class="t_01">Cavallerie</div><div>Proficent in riding. When riding gain movmentspeed and advantage on meele attacks.</div></div>
+    <div class="backgrnd_01"> <label for="class_07"><img src="/pica/knight_02.jpg" class="pic_06" id="cl_07"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_07" /> <div class="t_01">Knight</div><div>Gain proficency in heavy armor, shield and martial swords. You gain +1 to attack and damge with swords. You gain +1 total AC when wearing heavy armor and a shield.</div></div>
+    <div class="backgrnd_01"> <label for="class_08"><img src="/pica/shieldwall_03.jpg" class="pic_06" id="cl_08"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_08" /> <div class="t_01">Shield Barear</div><div>Gain +2 AC. Get the ability to stun enemies with a shieldbash. (dc13 str saving throw).</div></div>
+    <div class="backgrnd_01"> <label for="class_09"><img src="/pica/barbarian_01.jpg" class="pic_06" id="cl_09"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_09" /> <div class="t_01">Barbarian</div><div>Raw furry allows you to endure 50% less physical damage while not wearing any armor.</div></div>
+    <div class="backgrnd_01"> <label for="class_10"><img src="/pica/skirmisher_01.jpg" class="pic_06" id="cl_10"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_10" /> <div class="t_01">Skirmisher</div><div>You gain profiency in medium armor and wepenory. Supirior movment, ttactics and reflexes make you unbeatable in a Duel. While fighting one foe you gain +1 to atk and dmg, +1 to ac, +3 temporary hit points, dodge as bonusaction. </div></div>
+    <div class="backgrnd_01"> <label for="class_11"><img src="/pica/brawler_01.jpg" class="pic_06" id="cl_11"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_11" /> <div class="t_01">Brawler</div><div>Your fists deal 1d6+str blunt damage.</div></div>
+    <div class="backgrnd_01"> <label for="class_12"><img src="/pica/crossbow_01.jpg" class="pic_06" id="cl_12"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_12" /> <div class="t_01">Crossbow Expert</div><div>You are trained to shoot presice. Gain Proficency in meduim armor and crossbows. Gain +2 to hit on crosssbows. Chance to hit a headshot and deal double daamage. Staks with critical.</div></div>
+    <div class="backgrnd_01"> <label for="class_13"><img src="/pica/crafter_01.jpg" class="pic_06" id="cl_13"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_13" /> <div class="t_01">Crafter</div><div>Craft Healing potions, posions, armor and much more on your downtime</div></div>
+    <div class="backgrnd_01"> <label for="class_14"><img src="/pica/beast_master_01.jpg" class="pic_06" id="cl_14"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_14" /> <div class="t_01">Beast Master</div><div>You can spend a week trying to tame a beast. If You manage a series of related rolls you gain a Beast as companion.</div></div>
+    <div class="backgrnd_01"> <label for="class_15"><img src="/pica/skulker_01.jpg" class="pic_06" id="cl_15"> <input type="checkbox" class ="hidden" onchange="setclass_01()" id="class_15" /> <div class="t_01">Trapper</div><div>Prepare and craft trapps. Helfull in defending your base of operations.</div></div>
+
+  </div>
+
+
+
+  <!--Goblin to attack-->  
+  <div class="goblin_gridd">
+  <div class="t_0021" id="goblintalk">Soon you will be able to fight uzzzss...</div>
+    <div><img id="goblin" onclick="fight1()" src="/pica/goblin_01.png" class="goblin_idle" alt=""> </div>
+  </div>
+
+
+  
+
+  <!--Sidebar-->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">Character</a>
+    <a href="#">Equipped</a>
+    <a href="#">Inventory</a>
+    <a href="#">Level Up</a>
+
+  <div ><img src="/pica/character_01.png" alt="" class="pic_1003"><br><br></div>
+
+
+  <a href="#">World</a>
+  <a href="#">Lore</a>
+  <a href="#">Info</a>
+  </div>
+
+  <!--Statview-->
+  <div class="info" id="info_01"> 
+    <div onclick="openNav()" class="menubutton">MENU</div>
+    <div>STR:</div>
+    <div id="stat_0"></div>
+    <div>DEX:</div>
+    <div id="stat_1"></div>
+    <div>CON:</div>
+    <div id="stat_2"></div>
+    <div>INT:</div>
+    <div id="stat_3"></div>
+    <div>PSY:</div>
+    <div id="stat_4"></div>
+    <div>CHA:</div>
+    <div id="stat_5"></div>
+    <div>AC:</div>
+    <div id="stat_6"></div>
+    <div>HP:</div>
+    <div id="stat_7"></div>
+    <div>PP:</div>
+    <div id="stat_8"></div>
+    <div>GP:</div>
+    <div id="stat_9"></div>
+    <div>MP:</div>
+    <div id="stat_10"></div>
+    <div>PT:</div>
+    <div id="stat_11"></div>
+
+  </div>
+
+  <a href="https://www.patreon.com/Lina_Cyoa"><img style="max-width: 100%;" src="/Earos_01.png" alt=""></a>
+
+  </body>
+
+  </html>
